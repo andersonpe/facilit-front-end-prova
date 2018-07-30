@@ -1,0 +1,21 @@
+
+<div ng-if="vm.users == null">
+    <span class="error"> Sem resultados.</span>
+</div>
+<div ng-repeat="result in vm.users" class="grid">
+  <div class="department">
+      <span>{{result.name}}</span>
+  </div>
+  <div class="item" ng-repeat="workers in result.workers">
+    <div class="item-content-wrapper">
+      <div class="photo">
+        <img ng-src="{{workers.photo}}" alt="{{workers.name}}">
+      </div>
+      <div class="info">
+        <h2 class="name">{{workers.name}}</h2>
+        <h4 class="role">{{workers.role}}</h4>
+      </div>
+    </div>
+    <div class="item-separator"></div> 
+  </div>
+</div>

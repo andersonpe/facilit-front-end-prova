@@ -1,0 +1,43 @@
+<div class="container">
+
+  <div class="filters">
+      <h1>Filtrar Colaboradores</h1>
+      <div class="input-wrapper">
+          <div class="input">
+            <input type="text" ng-model="$ctrl.searchValue" placeholder="Filtrar por todos os campos">
+            <span><img src="/assets/images/icons/i-search.png" alt="Filtrar" ng-click="$ctrl.search(3)"></span>
+          </div>
+      </div>
+      <div class="separator">
+        ou
+      </div>
+      <h2>Filtrar por categoria</h2>
+      <div class="btn-wrapper">
+        <div class="btn green" ng-click="$ctrl.filter(1)">
+            <i class="icon icon-departamento"></i> 
+            <span>Departamento</span>
+            <div>
+                <i class="arrow-right"></i>
+            </div>
+        </div>
+        <div class="btn green" ng-click="$ctrl.filter(2)">
+            <i class="icon icon-cargo"></i> 
+            <span>Cargo</span>
+            <div>
+                <i class="arrow-right"></i>
+            </div>
+        </div>
+      </div>
+
+      <div class="btn-wrapper centered">
+        <div class="btn-submit" ng-click="$ctrl.search()">Filtrar</div>
+      </div>
+  </div>
+
+  <div class="results">
+    <div class="scrollable">
+        <user users='$ctrl.users'></user-item>
+    </div>
+  </div>
+
+</div>
